@@ -1693,7 +1693,7 @@ void digitalWrite (int pin, int value)
 				pin = pinToGpio[pin];
         if(-1 == pin) {
         printf("\n 1111111 \n ");
-        printf(pinToGpio)
+        printf(pinToGpio);
         printf("\n 1111111 \n ");
         }
 			}
@@ -1701,7 +1701,7 @@ void digitalWrite (int pin, int value)
 				pin = physToGpio[pin];
           if(-1 == pin) {
         printf("\n 222222 \n ");
-            printf(pinToGpio)
+            printf(pinToGpio);
         printf("\n 222222 \n ");
         }
 			else 
