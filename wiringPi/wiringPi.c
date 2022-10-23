@@ -1692,17 +1692,11 @@ void digitalWrite (int pin, int value)
 			} else if (wiringPiMode == WPI_MODE_PINS) {
 				pin = pinToGpio[pin];
         if(-1 == pin) {
-        printf("\n 1111111 \n ");
-        printf(pinToGpio);
-        printf("\n 1111111 \n ");
         }
 			}
 			else if (wiringPiMode == WPI_MODE_PHYS)
 				pin = physToGpio[pin];
           if(-1 == pin) {
-        printf("\n 222222 \n ");
-            printf(pinToGpio);
-        printf("\n 222222 \n ");
         }
 			else 
 				return;
