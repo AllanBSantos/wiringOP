@@ -1668,6 +1668,7 @@ unsigned int digitalRead8 (int pin)
 
 void digitalWrite (int pin, int value)
 {
+  printf("------------ digitalWrite WiringPi ------------- pin: %d", pin);
 	struct wiringPiNodeStruct *node = wiringPiNodes ;
 	int ret;
 
