@@ -1668,9 +1668,9 @@ unsigned int digitalRead8 (int pin)
 
 void digitalWrite (int pin, int value)
 {
-  printf("------------ digitalWrite WiringPi ------------- pin: %d", pin);
 	struct wiringPiNodeStruct *node = wiringPiNodes ;
 	int ret;
+  int oldPin = pin;
 
 	if(version == ORANGEPI) {   
 		if ((pin & PI_GPIO_MASK) == 0) {
@@ -1700,6 +1700,8 @@ void digitalWrite (int pin, int value)
 			if(-1 == pin) {
 				printf("[%s:L%d] the pin:%d is invaild,please check it over!\n", __func__,  __LINE__, pin);
 				printf("[%s:L%d] the mode is: %d, please check it over!\n", __func__,  __LINE__, wiringPiMode);
+        printf("------------ digitalWrite WiringPi ------------- pin with error: %d", oldPin);
+
 				
 				return;
 			}
