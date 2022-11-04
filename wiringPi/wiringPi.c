@@ -1698,10 +1698,10 @@ void digitalWrite (int pin, int value)
 			else if (wiringPiMode == WPI_MODE_PHYS)
 				pin = physToGpio[pin];
         if(oldPin == 28)
-          pin = 19
+          pin = 19;
 
         if(oldPin == 31)
-          pin = 8
+          pin = 8;
           if(-1 == pin) {
         }
 			else 
