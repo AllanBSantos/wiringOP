@@ -1420,10 +1420,10 @@ void pinMode (int pin, int mode)
       
 				pin = pinToGpio[pin];
          if(oldPin == 28)
-          pin = 17;
+          pin = 19;
 
         if(oldPin == 31)
-          pin = 20;
+          pin = 8;
 			else if (wiringPiMode == WPI_MODE_PHYS)
 				pin = physToGpio[pin];
 			else if (wiringPiMode != WPI_MODE_GPIO)
@@ -1706,10 +1706,10 @@ void digitalWrite (int pin, int value)
 			else if (wiringPiMode == WPI_MODE_PHYS)
 				pin = physToGpio[pin];
         if(oldPin == 28)
-          pin = 17;
+          pin = 19;
 
         if(oldPin == 31)
-          pin = 20;
+          pin = 8;
           if(-1 == pin) {
         }
 			else 
