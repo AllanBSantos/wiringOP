@@ -1671,10 +1671,13 @@ void digitalWrite (int pin, int value)
 	struct wiringPiNodeStruct *node = wiringPiNodes ;
 	int ret;
   int oldPin = pin;
+  printf(" \n ------------ digitalWrite WiringPi BEGIN ------------- pin: %d \n", oldPin);
+
 
 	if(version == ORANGEPI) {   
 		if ((pin & PI_GPIO_MASK) == 0) {
 			if (wiringPiMode == WPI_MODE_GPIO_SYS) {	// Sys mode
+          printf(" \n ********** 000000000 ********* \n");
 				if (sysFds [pin] != -1) {
 					if (value == LOW)
 					{
@@ -1690,7 +1693,8 @@ void digitalWrite (int pin, int value)
 				}
 				return ;
 			} else if (wiringPiMode == WPI_MODE_PINS) {
-				pin = pinToGpioOrangePi[pin];
+       printf(" \n ********** 111111111 ********* \n");
+				pin = pinToGpio[pin];
         if(-1 == pin) {
         }
 			}
@@ -1715,6 +1719,8 @@ void digitalWrite (int pin, int value)
 			if ((node = wiringPiFindNode(pin)) != NULL)
 				node->digitalWrite(node, pin, value);
 		}
+
+     printf(" \n ------------ digitalWrite WiringPi END ------------- pin: %d \n", oldPin);
 		return;
 	}
 }
