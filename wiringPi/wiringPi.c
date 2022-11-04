@@ -1691,7 +1691,8 @@ void digitalWrite (int pin, int value)
 				}
 				return ;
 			} else if (wiringPiMode == WPI_MODE_PINS) {
-       for(int i = 0; i < 100; i++) {
+        int i = 0;
+       for(i; i < 100; i++) {
         printf(" kkkkkkk %d ", pinToGpio[i]);
         printf("\n");
         } 
