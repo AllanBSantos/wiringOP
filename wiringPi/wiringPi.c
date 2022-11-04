@@ -1690,7 +1690,7 @@ void digitalWrite (int pin, int value)
 				}
 				return ;
 			} else if (wiringPiMode == WPI_MODE_PINS) {
-				pin = pinToGpio[pin];
+				pin = pinToGpioOrangePi[pin];
         if(-1 == pin) {
         }
 			}
