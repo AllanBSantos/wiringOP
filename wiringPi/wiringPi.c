@@ -1697,11 +1697,6 @@ void digitalWrite (int pin, int value)
 			}
 			else if (wiringPiMode == WPI_MODE_PHYS)
 				pin = physToGpio[pin];
-        if(oldPin == 28)
-          pin = 19;
-
-        if(oldPin == 31)
-          pin = 8;
           if(-1 == pin) {
         }
 			else 
@@ -1711,12 +1706,6 @@ void digitalWrite (int pin, int value)
 				printf("[%s:L%d] the pin:%d is invaild,please check it over!\n", __func__,  __LINE__, pin);
 				printf("[%s:L%d] the mode is: %d, please check it over!\n", __func__,  __LINE__, wiringPiMode);
         printf(" \n ------------ digitalWrite WiringPi ------------- pin with error: %d \n", oldPin);
-     int i = 0;
-     for(i; i < 100; i++) {
-        printf(" kkkkkkk i:[ %d ] --- %d ", i, pinToGpio[i]);
-        printf("\n");
-        } 
-				
 				return;
 			}
 		
