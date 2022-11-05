@@ -1412,18 +1412,11 @@ void pinMode (int pin, int mode)
 
 #ifdef CONFIG_ORANGEPI
 	if(version == ORANGEPI ) {
-      int oldPin = pin;
 		if (wiringPiDebug)
 			printf("PinMode: pin:%d,mode:%d\n", pin, mode);
 		if ((pin & PI_GPIO_MASK) == 0) {
 			if (wiringPiMode == WPI_MODE_PINS)
-      
 				pin = pinToGpio[pin];
-         if(oldPin == 28)
-          pin = 19;
-
-        if(oldPin == 31)
-          pin = 8;
 			else if (wiringPiMode == WPI_MODE_PHYS)
 				pin = physToGpio[pin];
 			else if (wiringPiMode != WPI_MODE_GPIO)
@@ -1432,7 +1425,6 @@ void pinMode (int pin, int mode)
 			if (-1 == pin) {
 				printf("[%s:L%d] the pin:%d is invaild,please check it over!\n", 
 							__func__,  __LINE__, pin);
-                printf(" \n ------------ digitalWrite WiringPi ------------- pin with error: %d \n", oldPin);
 				return;
 			}
 			
