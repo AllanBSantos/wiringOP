@@ -1672,9 +1672,6 @@ void digitalWrite (int pin, int value)
 	int ret;
   int oldPin = pin;
 
-  printf(" \n ********************* %d ----- %d \n", pin, pinToGpio[pin]);
-
-
 	if(version == ORANGEPI) {   
 		if ((pin & PI_GPIO_MASK) == 0) {
 			if (wiringPiMode == WPI_MODE_GPIO_SYS) {	// Sys mode
