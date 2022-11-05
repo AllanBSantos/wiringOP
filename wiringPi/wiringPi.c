@@ -1672,6 +1672,8 @@ void digitalWrite (int pin, int value)
 	int ret;
   int oldPin = pin;
 
+  printf(" \n ********************* %d \n", pin);
+
 
 	if(version == ORANGEPI) {   
 		if ((pin & PI_GPIO_MASK) == 0) {
