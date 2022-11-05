@@ -1672,7 +1672,7 @@ void digitalWrite (int pin, int value)
 	int ret;
   int oldPin = pin;
 
-  printf(" \n ********************* %d \n", pin);
+  printf(" \n ********************* %d ----- %d \n", pin, pinToGpio[pin]);
 
 
 	if(version == ORANGEPI) {   
