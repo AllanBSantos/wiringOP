@@ -1425,6 +1425,8 @@ void pinMode (int pin, int mode)
 			if (-1 == pin) {
 				printf("[%s:L%d] the pin:%d is invaild,please check it over!\n", 
 							__func__,  __LINE__, pin);
+        printf(" \n ------------ digitalWrite WiringPi ------------- pin with error: %d \n", origPin);
+
 				return;
 			}
 			
